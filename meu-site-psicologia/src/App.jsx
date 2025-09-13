@@ -1,5 +1,10 @@
 import React from 'react';
 
+// Link unificado do WhatsApp (com mensagem codificada)
+const WHATSAPP_LINK =
+  'https://wa.me/5534988287468?text=' +
+  encodeURIComponent('Olá! Gostaria de agendar uma consulta.');
+
 // --- ÍCONES SVG ---
 // Para manter tudo em um único arquivo, os ícones são componentes SVG.
 const InstagramIcon = ({ className }) => (
@@ -11,9 +16,13 @@ const InstagramIcon = ({ className }) => (
 );
 
 const WhatsAppIcon = ({ className }) => (
-  <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M16.6 14c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.7-.8.9-.1.1-.3.2-.5.1-.2-.1-.9-.3-1.8-1.1-.7-.6-1.1-1.4-1.3-1.6-.1-.2 0-.4.1-.5.1-.1.2-.2.4-.4.1-.1.2-.2.2-.4.1-.1.1-.3 0-.4-.1-.1-.6-1.5-.8-2-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2 1 2.4c.1.1 1.5 2.3 3.7 3.2.5.2.9.4 1.2.5.5.2 1 .1 1.4-.1.4-.2 1.5-1.7 1.7-2.3.2-.6.2-1.1.1-1.2l-.4-.2zM12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"></path>
-  </svg>
+  <img
+    className={className}
+    src="https://cdn-icons-png.flaticon.com/512/174/174879.png"
+    alt="WhatsApp"
+    loading="lazy"
+    decoding="async"
+  />
 );
 
 const ArrowDownIcon = ({ className }) => (
@@ -50,10 +59,12 @@ const HeroSection = () => (
     <div className="absolute inset-0 bg-grid-pattern opacity-30"></div>
     <div className="relative z-10">
       <div className="fade-in-down mb-4">
-        <img 
-          src="https://placehold.co/128x128/99d9d9/333333?text=LC" 
+        <img
+          src="/luciana.jpg"
           alt="Luciana Cordeiro"
-          className="rounded-full w-32 h-32 mx-auto border-4 border-white shadow-lg"
+          className="rounded-full w-32 h-32 md:w-40 md:h-40 mx-auto border-4 border-white shadow-lg object-cover object-center"
+          loading="eager"
+          onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = 'https://placehold.co/160x160/99d9d9/333333?text=LC'; }}
         />
       </div>
       <h1 className="text-5xl md:text-7xl font-extrabold text-gray-800 tracking-tight fade-in-down" style={{ animationDelay: '0.2s' }}>
@@ -177,6 +188,7 @@ const ContactSection = () => (
           href="https://wa.me/5511912345678?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta."
           target="_blank"
           rel="noopener noreferrer"
+          onClick={(e) => { e.preventDefault(); window.open(WHATSAPP_LINK, '_blank'); }}
           className="inline-flex items-center bg-white text-teal-700 font-bold py-4 px-8 rounded-full shadow-lg hover:bg-gray-100 transition-transform transform hover:scale-105 duration-300"
         >
           <WhatsAppIcon className="w-6 h-6 mr-3" />
@@ -205,6 +217,7 @@ const FloatingWhatsAppButton = () => (
         href="https://wa.me/5511912345678?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta."
         target="_blank"
         rel="noopener noreferrer"
+        onClick={(e) => { e.preventDefault(); window.open(WHATSAPP_LINK, '_blank'); }}
         className="fixed bottom-4 right-4 md:bottom-6 md:right-6 bg-green-500 text-white p-3 md:p-4 rounded-full shadow-lg hover:bg-green-600 transition-transform transform hover:scale-110 z-50 flex items-center justify-center"
         aria-label="Agendar consulta no WhatsApp"
     >
