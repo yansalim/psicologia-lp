@@ -95,7 +95,7 @@ const AboutSection = () => (
       <div className="scroll-animate">
         <h2 className="text-3xl font-bold text-gray-800 mb-4">Acolhimento e desenvolvimento para uma fase de descobertas</h2>
         <p className="text-gray-600 leading-relaxed text-lg">
-          Olá! Sou Luciana Cordeiro, psicóloga com registro CRP 04/55322. Minha paixão é guiar adolescentes através das complexidades e maravilhas da sua jornada de crescimento. Com uma abordagem empática e focada, crio um espaço seguro para que possam explorar suas emoções, fortalecer a autoestima e construir as ferramentas necessárias para um futuro saudável e consciente. Acredito no potencial de cada jovem e no poder da terapia para transformar desafios em oportunidades.
+          Olá! Sou Luciana Cordeiro, psicóloga com registro CRP 04/69211. Minha paixão é guiar adolescentes através das complexidades e maravilhas da sua jornada de crescimento. Com uma abordagem empática e focada, crio um espaço seguro para que possam explorar suas emoções, fortalecer a autoestima e construir as ferramentas necessárias para um futuro saudável e consciente. Acredito no potencial de cada jovem e no poder da terapia para transformar desafios em oportunidades.
         </p>
       </div>
     </div>
@@ -204,7 +204,7 @@ const ContactSection = () => (
 const Footer = () => (
   <footer className="bg-gray-800 text-white py-6">
     <div className="container mx-auto px-6 text-center">
-      <p>&copy; {new Date().getFullYear()} Luciana Cordeiro | Psicóloga CRP 04/55322</p>
+      <p>&copy; {new Date().getFullYear()} Luciana Cordeiro | Psicóloga CRP 04/69211</p>
       <p className="text-sm text-gray-400 mt-2">Site desenvolvido com ❤️</p>
     </div>
   </footer>
