@@ -60,7 +60,7 @@ const HeroSection = () => (
     <div className="relative z-10">
       <div className="fade-in-down mb-4">
         <img
-          src="/luciana.jpg"
+          src={`${import.meta.env.BASE_URL}luciana.jpg`}
           alt="Luciana Cordeiro"
           className="rounded-full w-32 h-32 md:w-40 md:h-40 mx-auto border-4 border-white shadow-lg object-cover object-center"
           loading="eager"
