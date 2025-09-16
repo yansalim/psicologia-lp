@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   // Base path for GitHub Pages: https://yansalim.github.io/psicologia-lp/
-  base: '/psicologia-lp/',
+  base: '/',
   plugins: [react(), tailwindcss()],
   server: {
     host: true,
