@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    image: psicologia-lp
+    container_name: psicologia-lp-container
+    ports:
+      - "8484:80"
+    restart: always
